@@ -14,6 +14,7 @@
     dest: "{{ role_path }}/files/data/iso/{{ iso_url | basename }}"
     checksum: "{{ iso_checksum }}"
     mode: 0644
+    validate_certs: false
   register: iso
 
 - name: Extract boot image
