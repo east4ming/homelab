@@ -1,6 +1,6 @@
 dex:
   config:
-    issuer: https://dex.e-whisper.com
+    issuer: https://dex.127-0-0-1.ewhisper.cn
     storage:
       type: kubernetes
       config:
@@ -14,8 +14,8 @@ dex:
         config:
           clientID: $KANIDM_CLIENT_ID
           clientSecret: $KANIDM_CLIENT_SECRET
-          redirectURI: https://dex.e-whisper.com/callback
-          issuer: https://auth.e-whisper.com/oauth2/openid/dex
+          redirectURI: https://dex.127-0-0-1.ewhisper.cn/callback
+          issuer: https://auth.127-0-0-1.ewhisper.cn/oauth2/openid/dex
           # TODO https://github.com/dexidp/dex/pull/3188
           # enablePKCE: true
           scopes:
@@ -27,12 +27,12 @@ dex:
       - id: grafana-sso
         name: Grafana
         redirectURIs:
-          - 'https://grafana.e-whisper.com/login/generic_oauth'
+          - 'https://grafana.127-0-0-1.ewhisper.cn/login/generic_oauth'
         secretEnv: GRAFANA_SSO_CLIENT_SECRET
       - id: gitea
         name: Gitea
         redirectURIs:
-          - 'https://git.e-whisper.com/user/oauth2/Dex/callback'
+          - 'https://git.127-0-0-1.ewhisper.cn/user/oauth2/Dex/callback'
         secretEnv: GITEA_CLIENT_SECRET
   envFrom:
     - secretRef:
@@ -43,7 +43,7 @@ dex:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: &host dex.e-whisper.com
+      - host: &host dex.127-0-0-1.ewhisper.cn
         paths:
           - path: /
             pathType: ImplementationSpecific

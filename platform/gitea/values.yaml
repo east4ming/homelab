@@ -5,7 +5,7 @@ gitea:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: &host git.e-whisper.com
+      - host: &host git.127-0-0-1.ewhisper.cn
         paths:
           - path: /
             pathType: Prefix
@@ -19,7 +19,7 @@ gitea:
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.e-whisper.com
+        ROOT_URL: https://git.127-0-0-1.ewhisper.cn
         OFFLINE_MODE: true
       repository:
         DISABLED_REPO_UNITS: repo.wiki,repo.projects,repo.packages

@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "e-whisper.com"
+  name = "127-0-0-1.ewhisper.cn"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}

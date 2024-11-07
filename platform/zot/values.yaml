@@ -6,7 +6,7 @@ zot:
       nginx.ingress.kubernetes.io/proxy-body-size: "0"
     className: nginx
     hosts:
-      - host: &host registry.e-whisper.com
+      - host: &host registry.127-0-0-1.ewhisper.cn
         paths:
           - path: /
     tls:

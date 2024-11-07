@@ -19,7 +19,7 @@ app-template:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &host home.e-whisper.com
+        - host: &host home.127-0-0-1.ewhisper.cn
           paths:
             - path: /
               pathType: Prefix
@@ -61,76 +61,76 @@ app-template:
         services.yaml: |
           - Popular:
             - Matrix:
-                href: https://chat.e-whisper.com
+                href: https://chat.127-0-0-1.ewhisper.cn
                 description: Chat client
                 icon: element.svg
             - Jellyfin:
-                href: https://jellyfin.e-whisper.com
+                href: https://jellyfin.127-0-0-1.ewhisper.cn
                 description: Media system (movies, music, etc.)
                 icon: jellyfin.svg
             - Jellyseerr:
-                href: https://jellyseerr.e-whisper.com
+                href: https://jellyseerr.127-0-0-1.ewhisper.cn
                 description: Request media
                 icon: jellyseerr.svg
             - Paperless:
-                href: https://paperless.e-whisper.com
+                href: https://paperless.127-0-0-1.ewhisper.cn
                 description: Document management system
                 icon: paperless.svg
           - Management:
             - Transmission:
-                href: https://transmission.e-whisper.com
+                href: https://transmission.127-0-0-1.ewhisper.cn
                 description: Bittorrent client
                 icon: transmission.svg
             - Prowlarr:
-                href: https://prowlarr.e-whisper.com
+                href: https://prowlarr.127-0-0-1.ewhisper.cn
                 description: Indexer manager
                 icon: prowlarr.svg
             - Radarr:
-                href: https://radarr.e-whisper.com
+                href: https://radarr.127-0-0-1.ewhisper.cn
                 description: Movie manager
                 icon: radarr.svg
             - Sonarr:
-                href: https://sonarr.e-whisper.com
+                href: https://sonarr.127-0-0-1.ewhisper.cn
                 description: TV show manager
                 icon: sonarr.svg
             - Kanidm:
-                href: https://auth.e-whisper.com
+                href: https://auth.127-0-0-1.ewhisper.cn
                 description: Identity management
-                icon: https://auth.e-whisper.com/pkg/img/logo-square.svg
+                icon: https://auth.127-0-0-1.ewhisper.cn/pkg/img/logo-square.svg
           - Development:
             - Gitea:
-                href: https://git.e-whisper.com
+                href: https://git.127-0-0-1.ewhisper.cn
                 description: Git forge
                 icon: gitea.svg
             - Woodpecker:
-                href: https://ci.e-whisper.com
+                href: https://ci.127-0-0-1.ewhisper.cn
                 description: Continuous integration
                 icon: woodpecker-ci.svg
             - ArgoCD:
-                href: https://argocd.e-whisper.com
+                href: https://argocd.127-0-0-1.ewhisper.cn
                 description: Continuous deployment
                 icon: argocd.svg
             - Registry:
-                href: https://registry.e-whisper.com
+                href: https://registry.127-0-0-1.ewhisper.cn
                 description: Container registry
                 icon: docker.svg
             - Grafana:
-                href: https://grafana.e-whisper.com
+                href: https://grafana.127-0-0-1.ewhisper.cn
                 description: Observability dashboards
                 icon: grafana.svg
           - Utilities:
             - Excalidraw:
-                href: https://draw.e-whisper.com
+                href: https://draw.127-0-0-1.ewhisper.cn
                 description: Virtual whiteboard
                 icon: excalidraw.svg
             - Speedtest:
-                href: https://speedtest.e-whisper.com
+                href: https://speedtest.127-0-0-1.ewhisper.cn
                 description: Internal network speed test
                 icon: openspeedtest.png
         bookmarks.yaml: |
           - Homelab:
             - Documentation:
-              - href: https://homelab.e-whisper.com
+              - href: https://homelab.127-0-0-1.ewhisper.cn
                 icon: google-docs.svg
             - Public homelab repository:
               - href: https://github.com/khuedoan/homelab

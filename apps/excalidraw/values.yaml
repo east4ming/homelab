@@ -18,10 +18,10 @@ app-template:
       className: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
-        external-dns.alpha.kubernetes.io/target: homelab-tunnel.e-whisper.com
+        external-dns.alpha.kubernetes.io/target: homelab-tunnel.127-0-0-1.ewhisper.cn
         external-dns.alpha.kubernetes.io/cloudflare-proxied: 'true'
       hosts:
-        - host: &host draw.e-whisper.com
+        - host: &host draw.127-0-0-1.ewhisper.cn
           paths:
             - path: /
               pathType: Prefix

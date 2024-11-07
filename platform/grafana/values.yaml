@@ -5,7 +5,7 @@ grafana:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - &host grafana.e-whisper.com
+      - &host grafana.127-0-0-1.ewhisper.cn
     tls:
       - secretName: grafana-general-tls
         hosts:
@@ -20,7 +20,7 @@ grafana:
   envFromSecret: grafana-secrets
   grafana.ini:
     server:
-      root_url: https://grafana.e-whisper.com
+      root_url: https://grafana.127-0-0-1.ewhisper.cn
     auth.generic_oauth:
       enabled: true
       allow_sign_up: true
@@ -28,9 +28,9 @@ grafana:
       client_id: grafana-sso
       client_secret: $__env{GRAFANA_SSO_CLIENT_SECRET}
       scopes: openid profile email groups
-      auth_url: https://dex.e-whisper.com/auth
-      token_url: https://dex.e-whisper.com/token
-      api_url: https://dex.e-whisper.com/userinfo
+      auth_url: https://dex.127-0-0-1.ewhisper.cn/auth
+      token_url: https://dex.127-0-0-1.ewhisper.cn/token
+      api_url: https://dex.127-0-0-1.ewhisper.cn/userinfo
   persistence:
     enabled: true
     size: 1Gi

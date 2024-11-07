@@ -1,6 +1,6 @@
 argo-cd:
   global:
-    domain: argocd.e-whisper.com
+    domain: argocd.127-0-0-1.ewhisper.cn
   configs:
     params:
       server.insecure: true
@@ -10,9 +10,6 @@ argo-cd:
       resource.customizations.ignoreResourceUpdates.all: |
         jsonPointers:
           - /status
-  redis:
-    image:
-      repository: docker.e-whisper.com/redis
   server:
     ingress:
       enabled: true
@@ -32,6 +29,8 @@ argo-cd:
     metrics: *metrics
   redis:
     metrics: *metrics
+    image:
+      repository: docker.127-0-0-1.ewhisper.cn/redis
 argocd-apps:
   applicationsets:
     root:
@@ -39,7 +38,7 @@ argocd-apps:
       generators:
         - git:
             repoURL: &repoURL http://gitea-http.gitea:3000/ops/homelab
-            revision: &revision master
+            revision: &revision dev
             directories:
               - path: system/*
               - path: platform/*

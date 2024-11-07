@@ -33,14 +33,14 @@ app-template:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &ollamaHost ollama.e-whisper.com
+        - host: &ollamaHost ollama.127-0-0-1.ewhisper.cn
           paths:
             - path: /
               pathType: Prefix
               service:
                 name: main
                 port: http
-        - host: &uiHost ai.e-whisper.com
+        - host: &uiHost ai.127-0-0-1.ewhisper.cn
           paths:
             - path: /
               pathType: Prefix

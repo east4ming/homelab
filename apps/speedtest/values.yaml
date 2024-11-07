@@ -20,7 +20,7 @@ app-template:
         nginx.ingress.kubernetes.io/proxy-body-size: 50m
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &host speedtest.e-whisper.com
+        - host: &host speedtest.127-0-0-1.ewhisper.cn
           paths:
             - path: /
               pathType: Prefix

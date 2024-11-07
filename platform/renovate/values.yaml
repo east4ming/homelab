@@ -5,7 +5,7 @@ renovate:
     config: |
       {
         "platform": "gitea",
-        "endpoint": "https://git.e-whisper.com/api/v1",
+        "endpoint": "https://git.127-0-0-1.ewhisper.cn/api/v1",
         "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
         "autodiscover": true
       }

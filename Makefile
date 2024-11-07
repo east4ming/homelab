@@ -48,6 +48,7 @@ test:
 
 clean:
 	docker compose --project-directory ./metal/roles/pxe_server/files down
+	k3d cluster delete homelab-dev
 
 docs:
 	mkdocs serve
